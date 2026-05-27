@@ -39,19 +39,19 @@
 
   <main>
     <section id="entrevista">
-  <h2>Entrevista del cliente (video)</h2>
-  <div style="margin-top:12px">
-    <iframe 
-      width="720" 
-      height="405" 
-      src="https://www.youtube.com/embed/L0iA4D77j0k" 
-      title="Entrevista del cliente" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
+      <h2>Entrevista del cliente (video)</h2>
+      <div style="margin-top:12px">
+        <iframe 
+          width="720" 
+          height="405" 
+          src="https://www.youtube.com/embed/L0iA4D77j0k" 
+          title="Entrevista del cliente" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
 
     <section id="er">
       <h2>Diagrama E-R de la base de datos</h2>
@@ -164,8 +164,20 @@ public class Miscelanea_1 {
             }
         } while (opcion != 4);
     }
-}
-</pre>
+
+    // MÉTODOS AGREGADOS PARA EVITAR ERROR DE COMPILACIÓN
+    private static void menuProducto() {
+        System.out.println("Entrando al menú de productos...");
+    }
+
+    private static void menuCategoria() {
+        System.out.println("Entrando al menú de categorías...");
+    }
+
+    private static void menuVenta() {
+        System.out.println("Entrando al menú de ventas...");
+    }
+}</pre>
       <div style="margin-top:8px">
         <p class="small">Si quieres, reemplazo el nombre del método `menuProducto()` según tu implementación real.</p>
       </div>
@@ -183,8 +195,6 @@ public class Miscelanea_1 {
         if(target){ target.scrollIntoView({behavior:'smooth',block:'start'}); }
       });
     });
-
-    // No hay controles de subida de imágenes en esta versión
   </script>
 </body>
 </html>
