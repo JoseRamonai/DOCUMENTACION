@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Documentación - Menú de inicio</title>
+  <style>
+    body{font-family:Segoe UI, Roboto, Arial, sans-serif;margin:0;background:#f5f7fa;color:#222}
+    header{background:#024f9d;color:#fff;padding:18px 20px}
+    header h1{margin:0;font-size:20px}
+    .menu{display:flex;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #e1e4ea}
+    .menu button{background:#0078d7;color:#fff;border:0;padding:10px 14px;border-radius:6px;cursor:pointer;font-weight:600}
+    .menu button.active{background:#005a9e}
+    main{padding:18px;max-width:1100px;margin:0 auto}
+    section{background:#fff;padding:16px;margin-bottom:14px;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
+    h2{margin-top:0}
+    .screenshot-area{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .small{font-size:0.95rem;color:#444}
+    textarea{width:100%;min-height:120px;padding:8px;border-radius:6px;border:1px solid #ccd}
+    pre{background:#0b1220;color:#e6f0ff;padding:12px;border-radius:6px;overflow:auto}
+    label.file{display:inline-block;background:#eef6ff;padding:8px 10px;border-radius:6px;border:1px solid #cfe4ff;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Documentación del proyecto — Menú de inicio</h1>
+  </header>
+
+  <div class="menu" role="navigation" aria-label="Menú de secciones">
+    <button data-target="entrevista">Entrevista del cliente</button>
+    <button data-target="er">Diagrama E-R</button>
+    <button data-target="script">Script de la base de datos</button>
+    <button data-target="conexion">Conexión MySQL</button>
+    <button data-target="modelo">Package modelo</button>
+    <button data-target="dao">Package DAO (CRUD)</button>
+    <button data-target="jframes">JFrame / JInternalFrame</button>
+    <button data-target="main">AppLauncher (Main)</button>
+  </div>
+
+  <main>
+    <section id="entrevista">
+  <h2>Entrevista del cliente (video)</h2>
+  <div style="margin-top:12px">
+    <iframe 
+      width="720" 
+      height="405" 
+      src="https://www.youtube.com/embed/L0iA4D77j0k" 
+      title="Entrevista del cliente" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+    <section id="er">
+      <h2>Diagrama E-R de la base de datos</h2>
+      <p class="small">Inserta aquí la imagen del diagrama E-R o varias capturas.</p>
+      <div class="screenshot-area">
+        <img src="diagrama_er.jpg" alt="Diagrama E-R" />
+      </div>
+      <div>
+        <p class="small">Añade el diagrama en <code>diagrama_er.jpg</code>.</p>
+      </div>
+    </section>
+
+    <section id="script">
+      <h2>Script de la base de datos</h2>
+      <p class="small">Incluye aquí el script SQL. También puedes adjuntar capturas del script o del resultado.</p>
+      <div class="screenshot-area">
+        <img src="scrip_bd.jpg" alt="Script de la base de datos" />
+      </div>
+      <div style="margin-top:8px">
+        <p class="small">Incluye el script en <code>sql/script.sql</code> o pega aquí el contenido.</p>
+      </div>
+    </section>
+
+    <section id="conexion">
+      <h2>Clases Java de conexión a MySQL</h2>
+      <p class="small">Ejemplo: `app.db.DBMySQLConnection`. Pega el código o enlaza capturas desde <code>doc/</code>.</p>
+      <div class="screenshot-area">
+        <img src="conexio.jpg" alt="Conexión MySQL" />
+      </div>
+      <div style="margin-top:8px">
+        <p class="small">Añade capturas en <code>doc/</code> si necesitas mostrarlas.</p>
+      </div>
+    </section>
+
+    <section id="modelo">
+      <h2>Clases del package `modelo`</h2>
+      <p class="small">Ejemplo: `Cliente.java`. Añade aquí el código o capturas.</p>
+      <div class="screenshot-area">
+        <img src="categoria.jpg" alt="Modelo Categoria" />
+        <img src="productos.jpg" alt="Modelo Productos" />
+      </div>
+      <div style="margin-top:8px">
+        <p class="small">Añade capturas o ejemplos de código en <code>src/</code> o <code>doc/</code>.</p>
+      </div>
+    </section>
+
+    <section id="dao">
+      <h2>Clases del package `DAO` (CRUD)</h2>
+      <p class="small">Ejemplo: `ClienteDAO`, `ClienteDAOImplMySQL`.</p>
+      <div class="screenshot-area">
+        <img src="realizacion_ventas.jpg" alt="DAO Realización de ventas" />
+      </div>
+      <div style="margin-top:8px">
+        <p class="small">Añade capturas en <code>doc/</code> o pega fragmentos de log aquí.</p>
+      </div>
+    </section>
+
+    <section id="jframes">
+      <h2>Clases `JFrame` / `JInternalFrame` (Form, Menú)</h2>
+      <p class="small">Ejemplo: `MainMenu`, `ClienteForm`.</p>
+      <div class="screenshot-area">
+        <img src="registro_ventas.jpg" alt="Ventana JFrame" />
+      </div>
+      <div style="margin-top:8px">
+        <p class="small">Guarda capturas de las ventanas en <code>doc/</code>.</p>
+      </div>
+    </section>
+
+    <section id="main">
+      <h2>Clase `Main` (AppLauncher)</h2>
+      <p class="small">Ejemplo de clase principal para iniciar el sistema. Este bloque corresponde a `Miscelanea_1`.</p>
+      <pre>package com.mycompany.miscelanea_1;
+
+import CRUD.*;
+import Modelos.*;
+import java.util.Scanner;
+
+public class Miscelanea_1 {
+    private static final Scanner sc = new Scanner(System.in);
+    private static final productoCRUD prodDAO = new productoCRUD();
+    private static final categoriaCRUD catDAO = new categoriaCRUD();
+    private static final ventaCRUD ventaDAO = new ventaCRUD();
+
+    public static void main(String[] args) {
+        int opcion;
+        do {
+            System.out.println("\n========== SISTEMA DE GESTIÓN INTEGRAL ==========");
+            System.out.println("1. GESTIONAR PRODUCTOS");
+            System.out.println("2. GESTIONAR CATEGORÍAS");
+            System.out.println("3. GESTIONAR VENTAS");
+            System.out.println("4. SALIR");
+            System.out.print("Seleccione un módulo: ");
+            opcion = sc.nextInt();
+            sc.nextLine();
+            switch (opcion) {
+                case 1:
+                    menuProducto();
+                    break;
+                case 2:
+                    menuCategoria();
+                    break;
+                case 3:
+                    menuVenta();
+                    break;
+                case 4:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción inválida.");
+            }
+        } while (opcion != 4);
+    }
+}
+</pre>
+      <div style="margin-top:8px">
+        <p class="small">Si quieres, reemplazo el nombre del método `menuProducto()` según tu implementación real.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Navegación simple y marcado del botón activo
+    document.querySelectorAll('.menu button').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        document.querySelectorAll('.menu button').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = document.getElementById(btn.dataset.target);
+        if(target){ target.scrollIntoView({behavior:'smooth',block:'start'}); }
+      });
+    });
+
+    // No hay controles de subida de imágenes en esta versión
+  </script>
+</body>
+</html>
